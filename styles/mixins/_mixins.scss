@@ -1,0 +1,29 @@
+@use '../variables/variables';
+// @mixin button-styles ($bg-color: $primary-color, $hover-bg-color: darken($bg-color, 10%))  {
+//     padding: 0.7rem 1.5rem;
+//     font-size: 1.1rem;
+//     color: variables.$white;
+//     border-radius: 0.3rem;
+//     border: none;
+//     background-color: $bg-color;
+//     position: absolute;
+//     right: 0.5rem;
+//     bottom: 0.5rem;
+//   }
+  
+  @mixin made-by ($color: variables.$dark) {
+    color: $color;
+    font-size: 0.9rem;
+  }
+
+  @mixin button-styles ($bg-color: $primary-color, $r:0.6rem)  {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    color: variables.$white;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: $bg-color;
+    position: absolute;
+    right: $r;
+  }
+  

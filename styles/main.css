@@ -1,0 +1,247 @@
+.btn {
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.3rem;
+  background-color: #2d70fd;
+  border: none;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 2rem;
+  padding: 3rem;
+  margin-top: 90px;
+  height: 50%;
+  width: 60%;
+  box-shadow: 0 1rem 3rem 1rem rgba(177, 186, 203, 0.5);
+  max-width: 30rem;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  height: 3rem;
+  color: #001747;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input {
+  position: relative;
+  display: flex;
+}
+
+.input-field {
+  width: 100%;
+  border: #b1bacb;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  font-size: 1rem;
+}
+
+input[type=text]::-moz-placeholder {
+  color: #b1bacb;
+}
+
+input[type=text]::placeholder {
+  color: #b1bacb;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+}
+ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+ul li .todo-container {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+}
+ul li .todo-container .text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+ul li .todo-container .text-wrapper .edit-todo {
+  width: 230px;
+}
+ul li .todo-container .text-wrapper p {
+  width: 230px;
+  overflow: hidden;
+  overflow-x: auto;
+  word-wrap: break-word;
+  color: blue;
+  margin: 0;
+  padding: 0.2rem;
+}
+ul li .todo-container .text-wrapper p:last-child {
+  margin-bottom: 0;
+}
+ul li .todo-container .text-wrapper .buttons-wrapper {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul li .todo-container .text-wrapper .buttons-wrapper .delbutton {
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  height: 2rem;
+  color: #ffffff;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+ul li .todo-container .text-wrapper .buttons-wrapper .editbtn {
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  height: 2rem;
+  color: #ffffff;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: #b1bacb;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+#todo-list {
+  color: #b1bacb;
+}
+
+.disabled {
+  display: flex;
+  text-decoration: line-through;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  border: 0.06rem solid #b1bacb;
+}
+
+.counter-container {
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: #b1bacb;
+}
+
+.counter-container p {
+  align-self: center;
+}
+
+.counter-container button {
+  border: none;
+  background-color: transparent;
+  color: #b1bacb;
+  font-size: 1rem;
+}
+
+.scroll {
+  height: 15rem;
+  scrollbar-width: thin;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #2d70fd;
+  border-radius: 0.5rem;
+}
+
+.scroll::-webkit-scrollbar-track {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  gap: 1.8rem;
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.made-by {
+  color: #405175;
+  font-size: 0.9rem;
+}
+
+.author {
+  color: #2d70fd;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}/*# sourceMappingURL=main.css.map */

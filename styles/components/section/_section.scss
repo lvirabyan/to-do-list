@@ -1,0 +1,186 @@
+@use '../../variables/variables';
+@use '../../mixins/mixins';
+
+.btn {
+    color: variables.$white;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: variables.$blue;
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin-top: 90px;
+    height: 50%;
+    width: 60%;
+    box-shadow: 0 1rem 3rem 1rem rgba(variables.$gray, 0.5);
+    max-width: 30rem;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    height: 3rem;
+    color: variables.$dark;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input {
+    position: relative;
+    display: flex;
+}
+
+.input-field {
+    width: 100%;
+    border: variables.$gray;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    font-size: 1rem;
+}
+
+input[type='text']::placeholder {
+    color: variables.$gray;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;  // Add overflow-x property for horizontal scroll
+
+    & li {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        & .todo-container {
+            display: flex;
+            height: 50px;
+            flex-direction: row;
+            // justify-content: space-between;
+
+            & .text-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 0.5rem;
+
+                & .edit-todo {
+                    width: 230px;
+                }
+                & p {
+                    width: 230px;
+                    overflow: hidden;
+                    overflow-x: auto;
+                    word-wrap: break-word;
+                    color: blue;
+                    margin: 0;
+                    padding: 0.2rem;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                & .buttons-wrapper {
+                    width: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    & .delbutton {
+                        padding: 0.2rem 0.5rem ;   
+                        font-size: 1rem;
+                        height: 2rem;
+                        color: variables.$white;
+                        border-radius: 0.3rem;
+                        border: none;
+                        background-color: variables.$red;
+                        display: flex;
+                        align-items: center;
+                        margin-right: 0.5rem;
+                    }
+
+                    & .editbtn {
+                        padding: 0.2rem 0.5rem;
+                        font-size: 1rem;
+                        height: 2rem;
+                        color: variables.$white;
+                        border-radius: 0.3rem;
+                        border: none;
+                        background-color: variables.$gray;
+                        display: flex;
+                        align-items: center;
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+  
+  
+
+
+
+#todo-list {
+    color: variables.$gray;
+}
+.disabled {
+    display: flex;
+    text-decoration: line-through;
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+
+  
+.counter {
+    border: 0.06rem solid variables.$gray;
+}
+.counter-container {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+   color: variables.$gray;
+    
+}
+.counter-container p {
+    align-self: center;
+}
+
+.counter-container button {
+    border: none;
+    background-color: transparent;
+    color: variables.$gray;
+    font-size: 1rem;
+}
+.scroll{
+    height: 15rem;
+    scrollbar-width: thin;
+}
+.scroll::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: variables.$blue;
+    border-radius: 0.5rem;
+
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    display: none;
+  }
